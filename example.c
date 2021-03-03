@@ -14,6 +14,5 @@ int main(){
 
     printf("\n%s\n", str1);
     printf("\n%s\n", str2);
-    test();
 }
 

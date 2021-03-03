@@ -6,12 +6,6 @@ void add_single_component_to_obj(json_object *j, void* com){
     return;
 }
 
-void add_obj_to_obj(json_object *j, void* com){
-    json_object *jobj = (json_object *)com;
-    json_object_array_add(j, jobj);
-    return;
-}
-
 void add_array_component_to_obj(json_object *j, void* com){
     array_component *dt = (array_component*)com;
     json_object* jArr = json_object_new_array();

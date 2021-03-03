@@ -28,7 +28,6 @@ typedef struct json_array_component{
 extern json_object* create_json_obj_from(void (*add_smt_to_obj)(json_object*, void*), int num_of, ...);
 
 void add_single_component_to_obj(json_object *j, void* com);
-void add_obj_to_obj(json_object *j, void* com);
 void add_array_component_to_obj(json_object *j, void* com);
 
 #endif
