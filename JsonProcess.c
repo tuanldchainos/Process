@@ -1,4 +1,6 @@
 #include "JsonProcess.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void add_single_component_to_obj(json_object *j, void* com){
     single_component *dt = (single_component*)com;
@@ -6,15 +8,6 @@ void add_single_component_to_obj(json_object *j, void* com){
     return;
 }
 
-void add_array_component_to_obj(json_object *j, void* com){
-    array_component *dt = (array_component*)com;
-    json_object* jArr = json_object_new_array();
-    for(int i = 0; i< dt->length; i++){
-        json_object_array_add(jArr, json_object_new_int(dt->value[i]));
-    }
-    json_object_object_add(j, dt->key, jArr);
-    return;
-}
 
 json_object* create_json_obj_from(void (*modelFunc)(json_object*, void*), int num_of, ...){
     va_list args_list;
