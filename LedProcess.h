@@ -4,10 +4,10 @@
 #include "mraa.h"
 #include <stdio.h>
 
-#define LED_INTERNET_PIN            15
+#define LED_INTERNET_PIN            19
 #define LED_SERVICE_PIN             18
 #define LED_ZIGBEE_PIN              16
-#define LED_BLE_PIN                 1
+#define LED_BLE_PIN                 15
 
 #define LED_INTERNET_PIN_INDEX      0
 #define LED_SERVICE_PIN_INDEX       1
