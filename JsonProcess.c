@@ -10,13 +10,14 @@ void add_single_component_to_obj(json_object *j, void* com){
 
 
 json_object* create_json_obj_from(void (*modelFunc)(json_object*, void*), int num_of, ...){
+	int i;
     va_list args_list;
     json_object *jobj = json_object_new_object();
     typedef void *com;
 
     va_start(args_list, num_of);
 
-    for(int i = 0; i< num_of; i++){
+    for(i = 0; i< num_of; i++){
         (*modelFunc)(jobj, va_arg(args_list, com));
     }
 

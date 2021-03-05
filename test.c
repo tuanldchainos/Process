@@ -1,12 +1,15 @@
-#include "JsonProcess.h"
+#include "LedProcess.h"
+#include <pthread.h>
+
+pthread_t vrts_System_Gpio;
 
 int main(){
-    single_component id = {"id", 1};
-    single_component adr = {"adr", 1040};
-    single_component cct = {"cct", 50};
-    json_object *j1 = create_json_obj_from(add_single_component_to_obj, 3, &id, &adr, &cct);
-    char *str1 = json_object_to_json_string(j1);
+	pthread_create(&vrts_System_Gpio,NULL,Led_Thread,NULL);
+	pthread_join(vrts_System_Gpio,NULL);
 
-    printf("\n%s\n", str1);
+	while(1){
+
+	}
+	return 0;
 }
 

@@ -1,6 +1,6 @@
 
 #ifndef __LOGGING_H__
-#define __LONGING_H__
+#define __LOGGING_H__
 
 #include <time.h>
 #include <string.h>
@@ -8,6 +8,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 #include "TimeHelper.h"
 
 #define LOG_KEEPING_DAYS    1
